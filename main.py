@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from triage import run_triage
 
-app = FastAPI()
+app = FastAPI(docs_url="/docs")
 
 class PatientMessage(BaseModel):
     message: str
